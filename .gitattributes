@@ -1,1 +1,3 @@
-*.gd linguist-language=GDScript
+*.gd	eol=lf
+*.tscn	eol=lf
+*.tres	eol=lf
