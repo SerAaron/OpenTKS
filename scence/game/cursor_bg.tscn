@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://script/cursor_label.gd" type="Script" id=1]
+[ext_resource path="res://font/kai.fnt" type="BitmapFont" id=2]
+
+[node name="Control" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="node" type="Node2D" parent="."]
+
+z/z = 600
+
+[node name="bgcolor" type="ColorFrame" parent="node"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 70.0
+margin/bottom = 16.0
+color = Color( 0.0196078, 0.176471, 0.372549, 0.841176 )
+
+[node name="text" type="Label" parent="node"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 2.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.831373, 0.819608, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 0
+custom_constants/shadow_as_outline = 1
+text = "Map_Name"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://script/map.gd" type="Script" id=1]
+[ext_resource path="res://texture/map/changsha/58-1-f.png" type="Texture" id=2]
+[ext_resource path="res://texture/map/changsha/58-1.png" type="Texture" id=3]
+[ext_resource path="res://scence/game/warper.tscn" type="PackedScene" id=4]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = Vector2Array( 182.524, 551.326, 147.975, 516.776, 132.538, 480.757, 128.127, 419.744, 125.187, 374.903, 123.717, 312.42, 167.822, 329.328, 222.954, 373.433, 327.337, 596.166, 692.884, 494.49, 798.222, 538.869, 799.267, 600.577, 771.334, 599.842, 672.831, 548.385, 584.62, 496.929, 588.295, 541.769, 556.686, 502.074, 342.039, 348.44, 394.966, 328.592, 543.455, 562.352, 442.012, 596.901, 256.033, 355.056, 297.199, 355.056, 561.097, 330.063, 566.243, 384.46, 434.661, 308.745, 512.581, 299.924, 449.363, 288.162, 439.072, 292.573 )
+polygons = [ IntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8 ), IntArray( 9, 10, 11, 12, 13, 14 ), IntArray( 14, 13, 15, 16 ), IntArray( 17, 18, 16, 15, 19, 20, 8 ), IntArray( 8, 7, 21, 22 ), IntArray( 8, 22, 17 ), IntArray( 23, 24, 16, 18, 25, 26 ), IntArray( 27, 26, 25, 28 ) ]
+outlines = [ Vector2Array( 798.222, 538.869, 692.884, 494.49, 584.62, 496.929, 556.686, 502.074, 566.243, 384.46, 561.097, 330.063, 512.581, 299.924, 449.363, 288.162, 439.072, 292.573, 434.661, 308.745, 394.966, 328.592, 342.039, 348.44, 297.199, 355.056, 256.033, 355.056, 222.954, 373.433, 167.822, 329.328, 123.717, 312.42, 125.187, 374.903, 128.127, 419.744, 132.538, 480.757, 147.975, 516.776, 182.524, 551.326, 327.337, 596.166, 442.012, 596.901, 543.455, 562.352, 588.295, 541.769, 672.831, 548.385, 771.334, 599.842, 799.267, 600.577 ) ]
+
+[node name="Changsha-03" type="Navigation2D" groups=[
+"map",
+]]
+
+script/script = ExtResource( 1 )
+
+[node name="foreground" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400, 300 )
+z/z = 600
+texture = ExtResource( 2 )
+
+[node name="background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400, 300 )
+texture = ExtResource( 3 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="pos_2-3" type="Position2D" parent="."]
+
+transform/pos = Vector2( 718.478, 540.18 )
+
+[node name="warper_3-2" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 774.832, 562.607 )
+transform/rot = -15.2424
+transform/scale = Vector2( 1.15191, 1.59423 )
+target_map_name = "KEY_MAP_02"
+target_map = "res://scence/map/Changsha-02.tscn"
+target_warp = "pos_3-2"
+
+
