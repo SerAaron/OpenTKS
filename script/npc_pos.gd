@@ -1,4 +1,5 @@
 extends Node2D
+# NPC的一些公用方法
 
 var cursor_anim = preload("res://script/cursor_anim.gd").new()
 

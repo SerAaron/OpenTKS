@@ -1,3 +1,5 @@
+# 创建鼠标在不同情形下的动画
+
 var pointer_null = preload("res://ui/1-0.png")
 var pointer = preload("res://ui/2-1.png")
 var pointer_talk = [

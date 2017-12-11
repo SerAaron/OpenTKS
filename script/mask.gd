@@ -1,4 +1,5 @@
 extends Node2D
+# 地图切换时的遮罩动画
 
 var anim_player = null
 var current_anim = null

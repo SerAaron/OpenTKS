@@ -1,4 +1,5 @@
 extends Area2D
+# 地图传送点
 
 export (String) var target_map_name = null
 export (String, FILE) var target_map = null
@@ -18,6 +19,7 @@ func _ready():
 	set_process_input(true)
 
 func on_body_enter(body):
+	# 避免初始化下一张地图时角色位置触发到下一张图的传送点
 	if(body.is_in_group("player") and click == true):
 		get_node("/root/scene_manager").warp(target_map, target_warp)
 		click = false
