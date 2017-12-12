@@ -46,4 +46,17 @@ target_map_name = "KEY_MAP_02"
 target_map = "res://scence/map/Changsha-02.tscn"
 target_warp = "pos_3-2"
 
+[node name="warper_3-4" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 136.402, 335.051 )
+transform/rot = -50.1471
+transform/scale = Vector2( 1.1327, 1.4852 )
+target_map_name = "KEY_MAP_04"
+target_map = "res://scence/map/Changsha-04.tscn"
+target_warp = "pos_3-4"
+
+[node name="pos_4-3" type="Position2D" parent="."]
+
+transform/pos = Vector2( 175.307, 377.623 )
+
 

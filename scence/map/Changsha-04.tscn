@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://script/map.gd" type="Script" id=1]
+[ext_resource path="res://texture/map/changsha/59-1.png" type="Texture" id=2]
+[ext_resource path="res://scence/game/warper.tscn" type="PackedScene" id=3]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = Vector2Array( 261.9, 300.052, 274.932, 281.318, 358.012, 295.165, 351.496, 310.64, 270.86, 502.049, 221.175, 481.687, 653.678, 413.268, 661.009, 423.857, 382.447, 598.976, 621.098, 428.744, 571.413, 396.163, 306.698, 560.694, 308.327, 526.485, 479.373, 366.841, 529.873, 339.148, 567.34, 357.882, 559.195, 377.43, 149.498, 363.583, 143.796, 345.664, 228.505, 301.681, 573.042, 388.018, 366.971, 318.785, 153.571, 400.236 )
+polygons = [ IntArray( 0, 1, 2, 3, 4, 5 ), IntArray( 6, 7, 8, 9 ), IntArray( 10, 9, 8, 11, 12 ), IntArray( 13, 14, 15, 16, 12 ), IntArray( 17, 18, 19 ), IntArray( 16, 20, 10, 12 ), IntArray( 21, 13, 12, 4 ), IntArray( 3, 21, 4 ), IntArray( 19, 0, 5, 22, 17 ) ]
+outlines = [ Vector2Array( 221.175, 481.687, 270.86, 502.049, 308.327, 526.485, 306.698, 560.694, 382.447, 598.976, 661.009, 423.857, 653.678, 413.268, 621.098, 428.744, 571.413, 396.163, 573.042, 388.018, 559.195, 377.43, 567.34, 357.882, 529.873, 339.148, 479.373, 366.841, 366.971, 318.785, 351.496, 310.64, 358.012, 295.165, 274.932, 281.318, 261.9, 300.052, 228.505, 301.681, 143.796, 345.664, 149.498, 363.583, 153.571, 400.236 ) ]
+
+[node name="Changsha-04" type="Navigation2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400, 300 )
+texture = ExtResource( 2 )
+
+[node name="foreground" type="Sprite" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="warper" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 553.307, 532.456 )
+transform/rot = -58.3436
+transform/scale = Vector2( 1, 3.02169 )
+target_map_name = "KEY_MAP_03"
+target_map = "res://scence/map/Changsha-03.tscn"
+target_warp = "pos_4-3"
+
+[node name="pos_3-4" type="Position2D" parent="."]
+
+transform/pos = Vector2( 504.739, 491.034 )
+
+
