@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://script/map.gd" type="Script" id=1]
+[ext_resource path="res://texture/map/changsha/55-1.png" type="Texture" id=2]
+[ext_resource path="res://scence/game/warper.tscn" type="PackedScene" id=3]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = Vector2Array( 688.549, 344.12, 715.492, 347.713, 655.619, 386.032, 361.636, 311.249, 469.452, 267.863, 469.364, 294.621, 449.629, 312.415, 671.785, 411.179, 591.554, 463.269, 567.005, 445.906, 590.69, 356.416, 397.91, 496.053, 217.613, 419.642, 233.497, 368.772, 341.675, 322.195, 440.813, 465.095, 452.54, 338.945, 663.442, 315.956, 502.688, 368.063, 558.983, 338.621, 493.228, 486.169, 241.96, 325.682, 226.199, 337.22 )
+polygons = [ IntArray( 0, 1, 2 ), IntArray( 3, 4, 5, 6 ), IntArray( 2, 7, 8, 9, 10 ), IntArray( 11, 12, 13, 14, 15 ), IntArray( 3, 6, 16, 15, 14 ), IntArray( 17, 0, 2, 10 ), IntArray( 18, 19, 10, 9, 20, 15 ), IntArray( 16, 18, 15 ), IntArray( 21, 14, 13, 22 ) ]
+outlines = [ Vector2Array( 217.613, 419.642, 397.91, 496.053, 440.813, 465.095, 493.228, 486.169, 567.005, 445.906, 591.554, 463.269, 671.785, 411.179, 655.619, 386.032, 715.492, 347.713, 688.549, 344.12, 663.442, 315.956, 590.69, 356.416, 558.983, 338.621, 502.688, 368.063, 452.54, 338.945, 449.629, 312.415, 469.364, 294.621, 469.452, 267.863, 361.636, 311.249, 341.675, 322.195, 241.96, 325.682, 226.199, 337.22, 233.497, 368.772 ) ]
+
+[node name="Changsha-05" type="Navigation2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 400, 300 )
+texture = ExtResource( 2 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="pos_1-5" type="Position2D" parent="."]
+
+transform/pos = Vector2( 586.674, 397.943 )
+
+[node name="warper_5-1" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 627.299, 435.63 )
+transform/rot = -56.4667
+transform/scale = Vector2( 0.661198, 1.64568 )
+target_map_name = "KEY_MAP_01"
+target_map = "res://scence/map/Changsha-01.tscn"
+target_warp = "pos_5-1"
+
+

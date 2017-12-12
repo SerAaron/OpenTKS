@@ -46,4 +46,30 @@ target_warp = "pos_1-2"
 
 transform/pos = Vector2( 61.463, 442.834 )
 
+[node name="warper_1-5" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 415.666, 216.429 )
+transform/rot = -72.7808
+transform/scale = Vector2( 0.772208, 1.62004 )
+target_map_name = "KEY_MAP_05"
+target_map = "res://scence/map/Changsha-05.tscn"
+target_warp = "pos_1-5"
+
+[node name="pos_5-1" type="Position2D" parent="."]
+
+transform/pos = Vector2( 470.992, 310.654 )
+
+[node name="warper_1-6" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 611.807, 568.651 )
+transform/rot = -65.0127
+transform/scale = Vector2( 1, 1.21064 )
+target_map_name = "KEY_MAP_06"
+target_map = "res://scence/map/Changsha-06.tscn"
+target_warp = "pos_1-6"
+
+[node name="pos_6-1" type="Position2D" parent="."]
+
+transform/pos = Vector2( 570.899, 509.512 )
+
 
