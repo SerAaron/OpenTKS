@@ -11,7 +11,7 @@
 [ext_resource path="res://texture/82-8.png" type="Texture" id=9]
 [ext_resource path="res://texture/82-9.png" type="Texture" id=10]
 [ext_resource path="res://texture/82-10.png" type="Texture" id=11]
-[ext_resource path="res://font/kai.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://font/kai-uyg.fnt" type="BitmapFont" id=12]
 
 [sub_resource type="Animation" id=1]
 

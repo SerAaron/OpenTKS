@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://script/cursor_label.gd" type="Script" id=1]
-[ext_resource path="res://font/kai.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://font/kai-uyg.fnt" type="BitmapFont" id=2]
 
 [node name="Control" type="Control"]
 
