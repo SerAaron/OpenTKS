@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=1]
+[gd_scene load_steps=21 format=1]
 
 [ext_resource path="res://script/npc_pos.gd" type="Script" id=1]
 [ext_resource path="res://texture/82-1.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://texture/82-9.png" type="Texture" id=10]
 [ext_resource path="res://texture/82-10.png" type="Texture" id=11]
 [ext_resource path="res://font/kai-uyg.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://scence/game/dialog.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 
@@ -173,8 +174,7 @@ margin/right = 24.0
 margin/bottom = -144.0
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 0
+custom_constants/shadow_as_outline = 1
 text = "NPC_TALK_01_1"
 percent_visible = 1.0
 lines_skipped = 0
@@ -192,11 +192,14 @@ margin/right = 24.0
 margin/bottom = -124.0
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 0
-custom_constants/shadow_offset_y = 0
+custom_constants/shadow_as_outline = 1
 text = "NPC_TALK_01_2"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="dialog" parent="." instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 46.4395, -110.128 )
 
 
